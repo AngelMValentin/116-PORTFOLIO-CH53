@@ -1,0 +1,50 @@
+/* Desktop View */
+
+:root {
+    --background-color: #282a36;
+    --bebas-font: "Bebas Neue", sans-serif;
+    --space-grotesk-font: "Space Grotesk", sans-serif;
+}
+
+
+html {
+    font-size: 16px;
+    background-color: var(--background-color);
+    font-family: var(--bebas-font);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* Phone */
+@media(max-width: 640px) {
+    html {
+        font-size: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        height: max-content;
+        padding: 2%;
+    }
+
+    .nav-options {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nav-options a {
+        margin: 1rem 0px;
+    }
+
+}
+
+@media((min-width:641px) and (max-width:1007px)) {
+    html {
+        font-size: 14px;
+    }
+}
