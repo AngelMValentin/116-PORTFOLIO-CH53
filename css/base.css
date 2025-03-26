@@ -17,6 +17,34 @@ h1 {
     font-size: 2rem;
 }
 
+.nav-options {
+    transition: max-height 0.3s ease;
+}
+
+.nav-options a {
+    margin: 1rem 0px;
+}
+
+.nav-btn label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.nav-btn label span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #f8f8f2;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+
 /* Phone */
 @media(max-width: 640px) {
     html {
@@ -41,6 +69,26 @@ h1 {
         margin: 1rem 0px;
     }
 
+    #nav-check:checked + .nav-btn label span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 9px);
+    }
+    #nav-check:checked + .nav-btn label span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-check:checked + .nav-btn label span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -8px);
+    }
+    
+    #nav-check:not(:checked) ~ .nav-options {
+        overflow: hidden;
+        max-height: 0;
+    }
+    
+    #nav-check:checked ~ .nav-options {
+        max-height: 300px;
+        overflow: visible;
+    }
+
 }
 
 @media((min-width:641px) and (max-width:1007px)) {
@@ -48,3 +96,21 @@ h1 {
         font-size: 14px;
     }
 }
+
+@media (min-width: 1025px) {
+    .nav-btn {
+      display: none; /* Hide hamburger */
+    }
+  
+    #nav-check {
+      display: none; /* Hide checkbox */
+    }
+  
+    .nav-options {
+      display: flex !important; /* Show nav links inline */
+      flex-direction: row;
+      gap: 2rem;
+      height: auto !important;
+      overflow: visible !important;
+    }
+  }
