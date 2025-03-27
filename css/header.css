@@ -23,6 +23,7 @@
 
 .header-left-side {
     width: 19%;
+    height: 2rem;
     font-family: var(--space-grotesk-font);
     display: flex;
     justify-content: center;

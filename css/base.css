@@ -43,74 +43,20 @@ h1 {
     transition: all 0.3s ease;
 }
 
-
-
-/* Phone */
-@media(max-width: 640px) {
-    html {
-        font-size: 10px;
-    }
-
-    header {
-        flex-direction: column;
-        height: max-content;
-        padding: 2%;
-    }
-
-    .nav-options {
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .nav-options a {
-        margin: 1rem 0px;
-    }
-
-    #nav-check:checked + .nav-btn label span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 9px);
-    }
-    #nav-check:checked + .nav-btn label span:nth-child(2) {
-        opacity: 0;
-    }
-    #nav-check:checked + .nav-btn label span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -8px);
-    }
-    
-    #nav-check:not(:checked) ~ .nav-options {
-        overflow: hidden;
-        max-height: 0;
-    }
-    
-    #nav-check:checked ~ .nav-options {
-        max-height: 300px;
-        overflow: visible;
-    }
-
+.aboutMe {
+    display: flex;
 }
 
-@media((min-width:641px) and (max-width:1007px)) {
-    html {
-        font-size: 14px;
-    }
+.photo {
+    height: 25rem;
+    width: 70rem;
+    background-image: url(../img/photo.jpg);
+    background-repeat: no-repeat;
+    background-position: center top -90px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 20px;
 }
 
-@media (min-width: 1025px) {
-    .nav-btn {
-      display: none; /* Hide hamburger */
-    }
-  
-    #nav-check {
-      display: none; /* Hide checkbox */
-    }
-  
-    .nav-options {
-      display: flex !important; /* Show nav links inline */
-      flex-direction: row;
-      gap: 2rem;
-      height: auto !important;
-      overflow: visible !important;
-    }
-  }
+.aboutMeText {
+}
