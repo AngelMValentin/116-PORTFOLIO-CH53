@@ -2,23 +2,24 @@
 
 :root {
     --background-color: #282a36;
-    --bebas-font: "Bebas Neue", sans-serif;
-    --space-grotesk-font: "Space Grotesk", sans-serif;
+    --heading-font: "Orbitron", sans-serif;
+    --body-font: "Rubik", sans-serif;
+    --font-color: #f8f8f2;
+    --accent: #8be9fd;
 }
 
 
 html {
     font-size: 16px;
     background-color: var(--background-color);
-    font-family: var(--bebas-font);
+    color: var(--font-color);
 }
 
-h1 {
-    font-size: 2rem;
-}
+
 
 .nav-options {
     transition: max-height 0.3s ease;
+    font-family: var(--heading-font);
 }
 
 .nav-options a {
@@ -48,15 +49,50 @@ h1 {
 }
 
 .photo {
-    height: 25rem;
-    width: 70rem;
     background-image: url(../img/photo.jpg);
     background-repeat: no-repeat;
-    background-position: center top -90px;
     background-size: cover;
-    border-radius: 50%;
-    margin: 20px;
+    border-radius: 45%;
+    margin: 0 auto;
 }
 
 .aboutMeText {
+    text-align: center;
+    width: 90%;
+    margin: 20px;
+}
+.aboutMeText h1, h5 {
+    margin: 20px;
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--body-font);
+}
+
+.skills {
+    display: inline-block;
+    background-color: #ffb86c;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: var(--body-font);
+}
+
+h5 {
+    color: #bd93f9;
+}
+
+.card {
+    width: 20rem;
+    display: inline-block;
+    background-color: #bd93f93f;
+    border-radius: 5%;
+}
+
+#projects {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
 }

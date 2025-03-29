@@ -7,8 +7,8 @@
 
 #navbar {
     display: flex;
+    flex-direction: row;
     width: 100vw;
-    height: 3rem;
     align-items: center;
     background-color: #282a36;
     position: sticky;
@@ -16,15 +16,16 @@
 }
 
 .header-right-side {
-    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    width: 80vw;
     font-size: 1.2rem;
     font-family: var(--bebas-font);
 }
 
 .header-left-side {
-    width: 19%;
-    height: 2rem;
-    font-family: var(--space-grotesk-font);
+    width: auto;
+    font-family: var(--heading-font);
     display: flex;
     justify-content: center;
 }
@@ -41,7 +42,7 @@
 
 .nav-options a {
     text-decoration: none;
-    color: #8be9fd;
+    color: var(--accent);
     font-weight: bold;
     padding: 10px;
 
